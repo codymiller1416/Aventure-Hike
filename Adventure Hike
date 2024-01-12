@@ -1,0 +1,57 @@
+ class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.Write("What is your name?: ");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Hello, {name}! Welcome to our story.");
+
+            Console.WriteLine("It begins while on a hike through the woods. On the way back to your car you hear a noise. Do you go towards the noise?");
+
+            Console.Write("Type YES or NO:");
+            string firstChoice = Console.ReadLine();
+            if (firstChoice == "NO")
+            {
+                Console.WriteLine("You continue your hike safely and are able to return to your car successfully");
+                Console.WriteLine("Game Over");
+                Console.WriteLine("Thanks for playing!");
+            }
+            else
+            {
+                Console.WriteLine("The noise appears to be coming from inside a dark cave. You enter the cave slowly.");
+                Console.WriteLine("You follow the noise to discover a hibernating bear. Do you escape through the exit on the left or the right?");
+
+                Console.Write("Type Left or Right:");
+                string caveChoice = Console.ReadLine();
+
+                if (caveChoice == "Left")
+                {
+                    Console.WriteLine("You run through exit on the left only for it to come to a dead end.");
+                    Console.WriteLine("Game Over");
+                    Console.WriteLine("Thanks for playing!");
+                }
+                else
+                {
+                    Console.WriteLine("You escape the cave but are now lost. You remember parking at the bottom of a mountain. There are three mountains in fron of you. You choose one of the three mountains to travel towards");
+                    Console.WriteLine("Enter a number(1-3) to travel towards that mountain");
+
+                    string mountainChoice = Console.ReadLine();
+                    switch (mountainChoice)
+                    {
+                        case "1":
+                            Console.WriteLine("Congratulations you made it back to the car a successfully completed the hike");
+                            break;
+                        case "2":
+                            Console.WriteLine("Sorry, you chose the wrong mountain and did not complete the hike");
+                            Console.WriteLine("Game Over");
+                            break;
+                        case "3":
+                            Console.WriteLine("Sorry, you chose the wrong mountain and did not complete the hike");
+                            Console.WriteLine("Game Over");
+                            break;
+                    }
+                }
+            }
+        }
+    }
